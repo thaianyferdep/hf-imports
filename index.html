@@ -246,12 +246,13 @@ p{margin:0;}
 .p1{grid-column:span 4;}
 .p2{grid-column:span 4;margin-top:40px;}
 .p3{grid-column:span 4;}
-.p4{grid-column:3/11;margin-top:8px;}
-.p4 img{aspect-ratio:16/9;object-fit:cover;object-position:50% 34%;}
+.p4{grid-column:span 4;}
+.p4 img{aspect-ratio:1/1;object-fit:cover;object-position:50% 40%;}
 .prova-foot{
-  margin-top:40px;padding-top:24px;border-top:1px solid rgba(3,32,78,.13);
-  display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;
-  font-size:15px;color:var(--ink-soft);
+  grid-column:span 8;align-self:end;padding:0 0 6px 28px;
+  border-left:1px solid rgba(3,32,78,.14);
+  display:flex;flex-direction:column;align-items:flex-start;gap:14px;
+  font-size:15.5px;line-height:1.6;color:var(--ink-soft);max-width:46ch;
 }
 .prova-foot a{color:var(--navy);text-decoration:none;font-weight:600;border-bottom:1px solid var(--gold-deep);}
 
@@ -329,7 +330,8 @@ p{margin:0;}
   .tile-c img{min-height:220px;aspect-ratio:16/7;}
   .tile-c .tile-body{padding:32px 28px 36px;}
   .p1,.p2,.p3{grid-column:span 6;margin-top:0;}
-  .p4{grid-column:span 12;}
+  .p4{grid-column:span 6;}
+  .prova-foot{grid-column:span 12;padding:22px 0 0;border-left:0;border-top:1px solid rgba(3,32,78,.14);max-width:none;}
 }
 @media (max-width:760px){
   body{font-size:16.5px;}
@@ -343,16 +345,17 @@ p{margin:0;}
   .sec{padding:72px 0;}
   .sec-tight{padding:58px 0;}
   .wrap{padding:0 20px;}
-  .hero-grid{padding:114px 0 62px;gap:34px;}
+  .hero-grid{padding:112px 0 56px;gap:26px;}
   .hero h1{font-size:clamp(31px,8.4vw,42px);}
-  .hero-sub{font-size:16.5px;}
-  .hero-cta{gap:12px;}
+  .hero-sub{font-size:16.5px;margin-top:16px;}
+  .hero-cta{gap:12px;margin-top:26px;}
   .hero-cta .btn{flex:1 1 100%;}
-  .hero-tag{margin-top:28px;padding-top:18px;font-size:12px;gap:8px 18px;}
-  .hero-shot img{aspect-ratio:16/10;object-position:52% 26%;}
+  .hero-tag{display:none;}
+  .hero-shot img{aspect-ratio:16/10;object-position:52% 62%;}
   .hero-stamp{position:static;margin-top:14px;max-width:none;}
   .p1,.p2,.p3,.p4{grid-column:span 12;margin-top:0;}
   .p4 img{aspect-ratio:4/3;}
+  .prova-foot{padding-top:18px;}
   .prova-grid{gap:16px;}
   .rodape-grid{grid-template-columns:1fr;}
   .rodape-links{text-align:left;}
@@ -362,9 +365,13 @@ p{margin:0;}
   .loja-faixa img{aspect-ratio:2/1;}
   .loja-cta .btn{flex:1 1 100%;}
 }
-@media (max-height:660px) and (max-width:760px){
-  .hero-grid{padding:104px 0 52px;}
-  .hero-shot img{aspect-ratio:2/1;}
+@media (max-height:700px) and (max-width:760px){
+  .hero-grid{padding:94px 0 40px;gap:20px;}
+  .hero h1{font-size:29px;}
+  .hero-sub{font-size:15.5px;line-height:1.5;margin-top:14px;}
+  .hero-cta{margin-top:20px;gap:10px;}
+  .hero-shot img{aspect-ratio:2.6/1;object-position:50% 78%;}
+  .hero-stamp{display:none;}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important;}
@@ -528,8 +535,8 @@ p{margin:0;}
         <figcaption><b>Direct</b> — cliente sobre o atendimento e as indicações que fez.</figcaption>
       </figure>
       <figure class="card p2 rv">
-        <img src="img/prova-post.jpg" alt="Publicação de cliente no Instagram dentro da HF Imports, com o iPhone e a sacola da loja" width="758" height="1400" loading="lazy">
-        <figcaption><b>Patrícia</b> — publicação marcando a loja, em Cacoal.</figcaption>
+        <img src="img/prova-post.jpg" alt="Publicação de cliente no Instagram dentro da HF Imports, com o iPhone e a sacola da loja, com a identidade ocultada" width="758" height="1400" loading="lazy">
+        <figcaption><b>Instagram</b> — publicação de cliente marcando a loja, em Cacoal.</figcaption>
       </figure>
       <figure class="card p3 rv">
         <img src="img/prova-dm2.jpg" alt="Mensagem de cliente no direct do Instagram depois de receber o aparelho, com a identidade ocultada" width="760" height="785" loading="lazy">
@@ -539,11 +546,10 @@ p{margin:0;}
         <img src="img/prova-story.jpg" alt="Sacola da HF Imports ao lado dos acessórios entregues ao cliente" width="579" height="1080" loading="lazy">
         <figcaption><b>Entrega feita</b> — sacola e acessórios como chegaram ao cliente, em story publicado por ele no Instagram.</figcaption>
       </figure>
-    </div>
-
-    <div class="prova-foot rv">
-      <p>Mensagens e publicações de clientes reais. Nas conversas de direct, a identidade de quem escreveu foi ocultada.</p>
-      <a href="https://www.instagram.com/hfimports.ro/" target="_blank" rel="noopener">Ver o perfil @hfimports.ro</a>
+      <div class="prova-foot rv">
+        <p>Mensagens e publicações de clientes reais da loja. Em todas elas, a identidade de quem aparece foi ocultada.</p>
+        <a href="https://www.instagram.com/hfimports.ro/" target="_blank" rel="noopener">Ver o perfil @hfimports.ro</a>
+      </div>
     </div>
   </div>
 </section>
